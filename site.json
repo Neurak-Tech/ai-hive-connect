@@ -1,0 +1,16 @@
+{
+  "domain": "connect.theaihive.space",
+  "funnels": [
+    {
+      "slug": "workforce-audit",
+      "title": "AI Workforce Audit",
+      "publish": true,
+      "serveAt": "/"
+    },
+    {
+      "slug": "whatsapp-api",
+      "title": "WhatsApp API",
+      "publish": true
+    }
+  ]
+}
