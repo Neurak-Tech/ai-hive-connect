@@ -43,7 +43,12 @@ Only one funnel may use `"serveAt": "/"`. That page is also copied to `/<slug>/`
 
 | Slug | URL | Status |
 | --- | --- | --- |
-| `workforce-audit` | https://connect.theaihive.space/ | cutover in progress |
-| `whatsapp-api` | https://connect.theaihive.space/whatsapp-api/ | cutover in progress |
+| `workforce-audit` | https://connect.theaihive.space/ | live on GitHub Pages; custom domain still on the old repo |
+| `whatsapp-api` | https://connect.theaihive.space/whatsapp-api/ | live on GitHub Pages; custom domain still on the old repo |
 
-After this repo is on GitHub, set **Settings → Pages → Source** to **GitHub Actions**, then attach `connect.theaihive.space` here and remove it from `ai-workforce-audit-funnel`.
+Preview without the custom domain:
+
+- https://neurak-tech.github.io/ai-hive-connect/
+- https://neurak-tech.github.io/ai-hive-connect/whatsapp-api/
+
+To finish the cutover: remove `connect.theaihive.space` from [ai-workforce-audit-funnel Pages](https://github.com/Neurak-Tech/ai-workforce-audit-funnel/settings/pages), then add it on [ai-hive-connect Pages](https://github.com/Neurak-Tech/ai-hive-connect/settings/pages) with HTTPS enforced.
