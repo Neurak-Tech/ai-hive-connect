@@ -7,5 +7,25 @@
   "phone": "tel:+918293859868",
   "whatsapp": "https://wa.me/918293859868",
   "email": "mailto:hello@theaihive.space",
-  "calendly": "https://calendly.com/theaihive/strategy-session"
+  "calendly": "https://calendly.com/theaihive/strategy-session",
+  "metaEvents": {
+    "load": {
+      "event": "ViewContent",
+      "content_name": "WhatsApp API Funnel",
+      "value": 200,
+      "currency": "INR"
+    },
+    "checkout": {
+      "event": "InitiateCheckout",
+      "content_name": "WhatsApp API Subscription",
+      "value": 200,
+      "currency": "INR"
+    },
+    "purchase": {
+      "event": "Purchase",
+      "content_name": "WhatsApp API Workspace",
+      "value": 200,
+      "currency": "INR"
+    }
+  }
 }

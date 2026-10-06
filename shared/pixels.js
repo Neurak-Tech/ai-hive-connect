@@ -5,6 +5,8 @@
   var config = runtime.config || {};
   var ids = config.analytics || {};
   var linkedinConversions = config.linkedinConversions || {};
+  var funnel = runtime.funnel || {};
+  var metaEvents = funnel.metaEvents || {};
 
   var META_EVENTS = {
     form_submit: "Lead",
@@ -24,6 +26,25 @@
     script.async = true;
     script.src = src;
     document.head.appendChild(script);
+  }
+
+  function metaPayload(spec) {
+    var payload = {};
+    if (!spec) return payload;
+    if (spec.content_name) payload.content_name = spec.content_name;
+    if (spec.value != null && spec.value !== "") payload.value = Number(spec.value);
+    if (spec.currency) payload.currency = spec.currency;
+    return payload;
+  }
+
+  function fireMeta(spec) {
+    if (!spec || !spec.event || typeof window.fbq !== "function") return;
+    window.fbq("track", spec.event, metaPayload(spec));
+  }
+
+  function isCheckoutLink(params) {
+    var href = params && params.link_url ? String(params.link_url) : "";
+    return /whatsapp\.theaihive\.io\/checkout/i.test(href);
   }
 
   function installMeta(pixelId) {
@@ -70,9 +91,13 @@
   runtime.track = function (eventName, params) {
     if (typeof previousTrack === "function") previousTrack(eventName, params);
     if (typeof window.fbq === "function") {
-      var metaEvent = META_EVENTS[eventName];
-      if (metaEvent) window.fbq("track", metaEvent, params || {});
-      else window.fbq("trackCustom", eventName, params || {});
+      if (eventName === "cta_click" && metaEvents.checkout && isCheckoutLink(params)) {
+        fireMeta(metaEvents.checkout);
+      } else {
+        var metaEvent = META_EVENTS[eventName];
+        if (metaEvent) window.fbq("track", metaEvent, params || {});
+        else window.fbq("trackCustom", eventName, params || {});
+      }
     }
     var conversionId = trimmed(linkedinConversions[eventName]);
     if (typeof window.lintrk === "function" && /^\d+$/.test(conversionId)) {
@@ -92,4 +117,5 @@
   }
   if (metaPixel) installMeta(metaPixel);
   if (linkedinPartnerId) installLinkedIn(linkedinPartnerId);
+  if (metaPixel) fireMeta(metaEvents.load);
 })();
