@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-06T04:54:29Z",
+  "generated_at": "2026-10-06T06:47:06Z",
   "funnels": [
     {
       "funnel": "strategy-session",
@@ -34,7 +34,7 @@
         "phone_click",
         "email_click"
       ],
-      "last_scan": "2026-10-06T04:54:29Z",
+      "last_scan": "2026-10-06T06:47:06Z",
       "signals": {
         "form_submit": 1,
         "cta_click": 29,
