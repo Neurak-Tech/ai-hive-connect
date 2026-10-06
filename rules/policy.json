@@ -1,0 +1,52 @@
+{
+  "config_file": "shared/config.json",
+  "lock_file": "rules/analytics-lock.json",
+  "override_trailer": "Analytics-Lock-Update: approved",
+  "bootstrap_src": "/shared/bootstrap.js",
+  "bootstrap_file": "shared/bootstrap.js",
+  "injections": [
+    "meta.js",
+    "analytics.js",
+    "pixels.js",
+    "conversion-tracker.js"
+  ],
+  "pixel_file": "shared/pixels.js",
+  "pixel_markers": [
+    "fbevents.js",
+    "insight.min.js"
+  ],
+  "analytics_file": "shared/analytics.js",
+  "analytics_markers": [
+    "gtag/js",
+    "gtm.js",
+    "clarity.ms/tag"
+  ],
+  "tracker_file": "shared/conversion-tracker.js",
+  "tracker_markers": [
+    "form_submit",
+    "cta_click",
+    "whatsapp_click",
+    "calendly_click",
+    "phone_click",
+    "email_click"
+  ],
+  "funnel_files": [
+    "index.html",
+    "app.js",
+    "style.css"
+  ],
+  "root_pages": [
+    "404.html"
+  ],
+  "redirect_pages": [
+    "index.html"
+  ],
+  "bypass_patterns": [
+    "AIHIVE_DISABLE_TRACKING",
+    "data-aihive-bypass",
+    "connect\\.facebook\\.net",
+    "googletagmanager\\.com",
+    "clarity\\.ms",
+    "snap\\.licdn\\.com"
+  ]
+}

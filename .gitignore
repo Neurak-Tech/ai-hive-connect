@@ -1,6 +1,6 @@
-.DS_Store
-Thumbs.db
 _site/
+.DS_Store
 *.log
-.idea/
-.vscode/
+.clone-ai-hive-connect/
+__pycache__/
+*.pyc

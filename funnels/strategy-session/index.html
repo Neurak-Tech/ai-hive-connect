@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+THESIS: A route sheet and a boarding slip, side by side. Refuses the centered hero, the three feature cards, and the stat row.
+OWN-WORLD: Cool metal field #e4edf1, indigo ink #12202b, airfield yellow #ffcc00 as the whole slip, square corners, Familjen Grotesk headlines, Atkinson Hyperlegible body, punched holes down the slip's left edge.
+STORY: The visitor sees a 45-minute session that maps one offer onto one page, then requests it or uses WhatsApp, phone, email, or calendar.
+FIRST VIEWPORT: Left, a large headline and the board. Right, a sticky yellow slip with the form. On a phone: headline, form, then board.
+FORM: Airfield departure board and boarding slip, chosen because this product routes pages. No concept-seed roll; the brief was the repository.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Put one offer on one page — AIHive</title>
+  <meta name="description" content="A 45-minute working session that maps one offer onto one page, with the conversion events that prove someone acted.">
+  <meta name="theme-color" content="#e4edf1">
+  <link rel="canonical" href="https://connect.theaihive.space/strategy-session/">
+  <meta property="og:title" content="Put one offer on one page — AIHive">
+  <meta property="og:description" content="A 45-minute working session that maps one offer onto one page, with the conversion events that prove someone acted.">
+  <meta property="og:url" content="https://connect.theaihive.space/strategy-session/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AIHive">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Put one offer on one page — AIHive">
+  <meta name="twitter:description" content="A 45-minute working session that maps one offer onto one page, with the conversion events that prove someone acted.">
+  <meta name="twitter:site" content="@theaihive">
+  <link rel="icon" href="/shared/mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Familjen+Grotesk:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#session-form">Skip to the request form</a>
+  <p class="status-strip"><strong>Template</strong> Reference funnel. Replace the offer and the contact links before you send traffic.</p>
+  <main>
+    <div class="frame">
+      <header class="mast">
+        <p class="brand"><img src="/shared/mark.svg" alt="" width="28" height="28"> AIHive</p>
+        <h1>Put one offer on one page.</h1>
+        <p class="lede">Forty-five minutes. We map a single offer into a page you can publish: the promise, the URL, and the events that count as a conversion.</p>
+        <p><a class="cta" href="#walkthrough">See how the 45 minutes go</a></p>
+      </header>
+
+      <form id="session-form" class="slip" name="strategy-session" novalidate>
+        <div class="slip-head">
+          <p>Boarding</p>
+          <h2>Request the session</h2>
+        </div>
+        <div class="slip-body">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+            <p id="name-error" class="error"></p>
+          </div>
+          <div class="field">
+            <label for="email">Work email</label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="email-error">
+            <p id="email-error" class="error"></p>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="phone-error">
+            <p id="phone-error" class="error"></p>
+          </div>
+          <div class="field">
+            <label for="decision">What should the page get someone to do?</label>
+            <textarea id="decision" name="decision" rows="4" required aria-describedby="decision-error"></textarea>
+            <p id="decision-error" class="error"></p>
+          </div>
+          <p class="hp" aria-hidden="true">
+            <label for="company-website">Company website</label>
+            <input id="company-website" name="company_website" type="text" tabindex="-1" autocomplete="off" data-honeypot>
+          </p>
+          <button type="submit">Request the session</button>
+          <p id="form-status" role="status" hidden></p>
+        </div>
+      </form>
+
+      <section class="board" aria-labelledby="board-title">
+        <h2 id="board-title">On the board</h2>
+        <dl>
+          <div>
+            <dt>Offer</dt>
+            <dd>One thing you already sell.</dd>
+          </div>
+          <div>
+            <dt>Page</dt>
+            <dd>One URL on connect.theaihive.space.</dd>
+          </div>
+          <div>
+            <dt>Counted actions</dt>
+            <dd>Form, WhatsApp, calendar, phone, or email.</dd>
+          </div>
+          <div>
+            <dt>You leave with</dt>
+            <dd>The map, and this page rewritten for that offer.</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+
+    <section id="walkthrough" class="minutes" aria-labelledby="minutes-title">
+      <h2 id="minutes-title">How the 45 minutes go</h2>
+      <ol>
+        <li><span>0–10</span> Name the action the page exists to get.</li>
+        <li><span>10–25</span> Cut the copy until that action is the only next step.</li>
+        <li><span>25–40</span> Attach the events so a click is visible in analytics.</li>
+        <li><span>40–45</span> Decide what on this template gets replaced before traffic.</li>
+      </ol>
+    </section>
+
+    <section class="bounds" aria-labelledby="bounds-title">
+      <h2 id="bounds-title">When to skip this</h2>
+      <p>Skip it if you want a brand platform, a tool demo, or a deck. The session produces a map for one offer and one page.</p>
+    </section>
+  </main>
+  <footer>
+    <ul class="channels">
+      <li><a href="https://wa.me/15550000000" rel="noopener noreferrer">WhatsApp</a></li>
+      <li><a href="tel:+15550000000">Call</a></li>
+      <li><a href="mailto:hello@theaihive.space">Email</a></li>
+      <li><a href="https://calendly.com/theaihive/strategy-session" rel="noopener noreferrer">Calendar</a></li>
+    </ul>
+    <p>Reference endpoints. Replace the WhatsApp number, phone, email, and calendar link in this file before you send traffic.</p>
+  </footer>
+  <script src="/shared/bootstrap.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

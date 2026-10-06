@@ -1,0 +1,40 @@
+name: Audit conversion registry
+
+on:
+  push:
+    paths:
+      - "funnels/**"
+      - "scripts/audit-funnels.py"
+      - ".github/workflows/audit.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: conversion-registry-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Scan changed funnels
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: python3 scripts/audit-funnels.py --since "$BEFORE"
+
+      - name: Commit registry
+        run: |
+          if git diff --quiet -- registry/conversion-status.json; then
+            echo "Registry already matches the scan"
+            exit 0
+          fi
+          git add registry/conversion-status.json
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -m "Update conversion registry from funnel scan"
+          git push

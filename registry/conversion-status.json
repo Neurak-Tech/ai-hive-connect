@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "generated_at": "2026-10-06T04:46:05Z",
+  "funnels": [
+    {
+      "funnel": "strategy-session",
+      "status": "tracked",
+      "events": [
+        "form_submit",
+        "cta_click",
+        "whatsapp_click",
+        "calendly_click",
+        "phone_click",
+        "email_click"
+      ],
+      "last_scan": "2026-10-06T04:46:05Z",
+      "signals": {
+        "form_submit": 1,
+        "cta_click": 1,
+        "whatsapp_click": 1,
+        "calendly_click": 1,
+        "phone_click": 1,
+        "email_click": 1
+      }
+    },
+    {
+      "funnel": "whatsapp-api",
+      "status": "tracked",
+      "events": [
+        "form_submit",
+        "cta_click",
+        "whatsapp_click",
+        "calendly_click",
+        "phone_click",
+        "email_click"
+      ],
+      "last_scan": "2026-10-06T04:46:05Z",
+      "signals": {
+        "form_submit": 1,
+        "cta_click": 4,
+        "whatsapp_click": 1,
+        "calendly_click": 1,
+        "phone_click": 1,
+        "email_click": 1
+      }
+    },
+    {
+      "funnel": "workforce-audit",
+      "status": "tracked",
+      "events": [
+        "form_submit",
+        "cta_click",
+        "whatsapp_click",
+        "calendly_click",
+        "phone_click",
+        "email_click"
+      ],
+      "last_scan": "2026-10-06T04:46:05Z",
+      "signals": {
+        "form_submit": 1,
+        "cta_click": 1,
+        "whatsapp_click": 1,
+        "calendly_click": 1,
+        "phone_click": 1,
+        "email_click": 1
+      }
+    }
+  ]
+}

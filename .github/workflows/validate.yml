@@ -1,0 +1,25 @@
+name: Protect funnels
+
+on:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run protection rules
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: python3 scripts/validate-protection.py --base "$BASE_SHA" --head "${{ github.sha }}"
+
+      - name: Run rule tests
+        run: python3 scripts/test-rules.py

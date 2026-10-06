@@ -1,0 +1,4 @@
+#!/bin/sh
+# Reject commits that break tracking or change analytics IDs without the approval trailer.
+root=$(git rev-parse --show-toplevel) || exit 1
+python3 "$root/scripts/validate-protection.py" --staged --message-file "$1"

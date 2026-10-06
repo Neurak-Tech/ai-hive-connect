@@ -1,0 +1,17 @@
+{
+  "analytics": {
+    "ga4": "",
+    "gtm": "",
+    "metaPixel": "",
+    "linkedinPartnerId": "",
+    "clarity": ""
+  },
+  "linkedinConversions": {
+    "form_submit": "",
+    "cta_click": "",
+    "whatsapp_click": "",
+    "calendly_click": "",
+    "phone_click": "",
+    "email_click": ""
+  }
+}

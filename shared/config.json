@@ -1,0 +1,29 @@
+{
+  "site": {
+    "name": "AIHive",
+    "domain": "https://connect.theaihive.space",
+    "title": "AIHive Funnels",
+    "description": "AIHive Funnels hosts one live page per folder. Each folder under funnels publishes at the domain root.",
+    "locale": "en_US",
+    "twitter": "@theaihive",
+    "image": ""
+  },
+  "analytics": {
+    "ga4": "",
+    "gtm": "",
+    "metaPixel": "",
+    "linkedinPartnerId": "",
+    "clarity": ""
+  },
+  "linkedinConversions": {
+    "form_submit": "",
+    "cta_click": "",
+    "whatsapp_click": "",
+    "calendly_click": "",
+    "phone_click": "",
+    "email_click": ""
+  },
+  "tracking": {
+    "debug": false
+  }
+}
