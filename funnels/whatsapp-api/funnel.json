@@ -1,7 +1,11 @@
 {
   "title": "AI Hive WhatsApp API",
-  "description": "One page for one offer, published by AIHive Funnels.",
+  "description": "The official WhatsApp API for your product. \u20b9200 a number. Zero commission.",
   "image": "",
-  "formAction": "",
-  "formMethod": "POST"
+  "formAction": "https://whatsapp.theaihive.io/checkout?plan=1b8b4c2b-30bf-4f9f-a9b8-0816f467cbf6&coupon=FIRST50",
+  "formMethod": "GET",
+  "phone": "tel:+918293859868",
+  "whatsapp": "https://wa.me/918293859868",
+  "email": "mailto:hello@theaihive.space",
+  "calendly": "https://calendly.com/theaihive/strategy-session"
 }
