@@ -154,6 +154,8 @@ def apply_base(text: str, base: str) -> str:
 
 
 def pages_base() -> str:
+    if (ROOT / "CNAME").is_file():
+        return ""
     return str(os.environ.get("PAGES_BASE_PATH") or "").rstrip("/")
 
 
